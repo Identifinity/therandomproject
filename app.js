@@ -39,13 +39,13 @@ app.post("/random", (req, res) => {
       DataModel.find({}, (err2, arr) => {
         if(err2) return res.json({error: true})
         return res.json({ results: arr, chance: req.body.chance })
-      }).limit(15).sort({'date': -1})
+      }).sort({'date': -1}).limit(15)
     })
   } else {
     DataModel.find({}, (err2, arr) => {
       if(err2) return res.json({error: true})
       return res.json({ results: arr, chance: req.body.chance })
-    }).limit(15).sort({'date': -1})
+    }).sort({'date': -1}).limit(15)
   }
 })
 
