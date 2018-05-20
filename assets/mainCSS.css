@@ -1,0 +1,184 @@
+body,html
+{
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+
+  background: dimgray;
+}
+
+#container
+{
+  width: 90%;
+  height: 100vh;
+
+  margin: 0 auto;
+}
+
+#greeting
+{
+  margin-top: .5em;
+  padding: .6em;
+
+  min-height: 1em;
+
+  box-shadow: 5px 5px 5px 5px darkred;
+  border-radius: .9em;
+
+  text-align: center;
+  font-size: 45px;
+
+  background: crimson;
+}
+
+#content
+{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  overflow-y: auto;
+
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 50px;
+
+  width: 50%;
+  height: 500px;
+
+  background: gray;
+  padding: 20px;
+  font-size: 30px;
+}
+
+#info
+{
+  margin: 0 auto;
+  min-height: 100px;
+  border-radius: 2em;
+  width: 80%;
+
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  padding: 10px;
+  text-align: center;
+
+  background: white;
+  color: darkcyan;
+  font-size: 25px;
+}
+
+.item
+{
+  min-width: 80%;
+  border: 2px solid lightgreen;
+  margin: 15px;
+  padding: 5px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.no-items
+{
+  min-width: 80%;
+  box-shadow: 0px 0px 4px 5px crimson;
+  border-radius: 10px;
+  background: crimson;
+  margin: 15px;
+  padding: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: snow;
+}
+
+.flagged
+{
+  border: none;
+  box-shadow: 0px 0px 10px 5px cyan;
+}
+
+.item > div:nth-child(1)
+{
+  border: 3px solid orange;
+  color: snow;
+  height: 50%;
+  padding: .5em;
+
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 15px;
+
+  border-radius: 20px;
+}
+
+.item > div:nth-child(2)
+{
+  border: 1px solid white;
+  width: 100px;
+  height: 100px;
+  background: darkgray;
+  color: darkgreen;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 450px) {
+  #greeting
+  {
+    font-size: 10vw;
+  }
+
+  #info
+  {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #content
+  {
+    width: 80%;
+  }
+
+  .item
+  {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  #greeting
+  {
+    font-size: 1.5em;
+  }
+  .item
+  {
+    flex-direction: column;
+  }
+
+  .item > div:first-child
+  {
+    width: 90%;
+    margin-right: 0;
+  }
+
+  .item > div:last-child
+  {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+  }
+}
