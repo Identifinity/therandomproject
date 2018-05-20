@@ -5,7 +5,7 @@ const mongoose  = require('mongoose')
 const DataModel = require('./DataModel')
 const bodyParser = require('body-parser')
 
-const port = process.env.POST || 3000
+const port = process.env.PORT || 3000
 
 mongoose
 .connect("mongodb://Interf:passw@ds111319.mlab.com:11319/interftest")
