@@ -49,6 +49,10 @@ app.post("/random", (req, res) => {
   }
 })
 
+app.get("/grid", (req, res) => {
+  res.sendFile(__dirname + "/grid.html")
+})
+
 app.use((req, res) => {
   res.redirect("/")
 })

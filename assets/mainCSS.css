@@ -33,9 +33,6 @@ body,html
 
 #content
 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   flex-direction: column;
 
   overflow-y: auto;
@@ -72,10 +69,11 @@ body,html
 
 .item
 {
-  min-width: 80%;
+  min-width: 70%;
   border: 2px solid lightgreen;
   margin: 15px;
   padding: 5px;
+  min-height: 100px;
 
   display: flex;
   justify-content: space-between;
@@ -110,7 +108,7 @@ body,html
   border: 3px solid orange;
   color: snow;
   height: 50%;
-  padding: .5em;
+  padding: .3em;
 
   text-align: center;
   display: flex;
@@ -145,17 +143,34 @@ body,html
   {
     font-size: 5vw;
   }
-}
-
-@media only screen and (max-width: 700px) {
-  #content
-  {
-    width: 80%;
-  }
 
   .item
   {
     width: 90%;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .item > div:first-child
+  {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #content
+  {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 600px){
+  .item > div:first-child
+  {
+    font-size: 45px;
   }
 }
 
@@ -164,7 +179,7 @@ body,html
   {
     font-size: 1.5em;
   }
-  .item
+  /* .item
   {
     flex-direction: column;
   }
@@ -180,5 +195,5 @@ body,html
     width: 100px;
     height: 100px;
     margin-top: 20px;
-  }
+  } */
 }

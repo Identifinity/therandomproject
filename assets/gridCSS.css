@@ -1,0 +1,72 @@
+
+@media screen and (min-width: 750px){
+  #container
+  {
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    grid-gap: 10px;
+
+    grid-template-areas:
+    "header header header header header"
+    "aside aside . nav nav"
+    ". . . . ."
+    "footer footer footer footer footer"
+  }
+}
+
+@media screen and (max-width: 750px){
+  #container
+  {
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    grid-gap: 10px;
+
+    grid-template-areas:
+    "header"
+    "footer"
+    "aside"
+    "nav"
+
+  }
+}
+
+#container > *
+{
+  padding: 30px;
+  background: #3bbced;
+}
+
+header
+{
+  grid-area: header;
+}
+
+aside
+{
+  grid-area: aside;
+
+}
+
+nav
+{
+  grid-area: nav;
+}
+
+footer
+{
+  grid-area: footer;
+}
+
+#container > div:nth-child(even)
+{
+  background: cyan;
+}
+
+#container > div:nth-child(odd)
+{
+  background: dimgray;
+}
